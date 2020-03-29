@@ -11,9 +11,7 @@ Read in：中文 \| English
 elfin projects is a php/swoole cored toolkit help you build web apps quickly, without losing much performance.
 
 ## Key Features
-
-{% tabs %}
-{% tab title="Installation" %}
+### Easy Installation
 You can install elfin by using composer.
 
 ```bash
@@ -27,9 +25,10 @@ use Elfin\Elfin;
 $app = new Elfin();
 $app->run();
 ```
-{% endtab %}
 
-{% tab title="Load Services" %}
+### Everything is Service
+All components are designed to be a `Service`.
+
 Suppose you want to create a webapp and using `SomeService` provided by `SomePackage`
 
 ```php
@@ -40,10 +39,9 @@ $app = new Elfin();
 $app->use(SomeService::class);
 $app->run();
 ```
-{% endtab %}
 
-{% tab title="Router" %}
-All components are designed to be a `Service`, suppose you want to build a web app using a `Router` or request dispatcher
+### Using Router
+Suppose you want to build a web app using a `Router` or request dispatcher
 
 ```php
 use Elfin\Elfin;
@@ -60,6 +58,5 @@ $router->get('/', function ($request, $response) {
 
 $app->run();
 ```
-{% endtab %}
-{% endtabs %}
+
 
